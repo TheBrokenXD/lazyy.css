@@ -1,0 +1,36 @@
+{
+  "name": "lazyy-css",
+  "version": "1.1.2",
+  "description": "A Utility-first CSS framework for those who are too lazy to create a CSS file",
+  "main": "index.html",
+  "scripts": {
+    "lazyy": "sass  --no-source-map src/sass/index.scss:dist/css/index.css",
+    "watch:lazyy": "sass  --no-source-map src/sass/index.scss:dist/css/index.css --watch",
+    "purge:lazyy": "purgecss --css dist/css/index.css --content *.html --output dist/css/",
+    "build:lazyy": "npm run purge:lazyy && postcss dist/css/*.css -u autoprefixer cssnano -r --no-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheBrokenXD/lazyy.css"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "framework"
+  ],
+  "author": "Broken",
+  "license": "ISC",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.1.3",
+    "autoprefixer": "^10.4.4",
+    "cssnano": "^5.1.7",
+    "postcss-cli": "^9.1.0",
+    "purgecss": "^4.1.3",
+    "sass": "^1.50.0"
+  },
+  "bugs": {
+    "url": "https://github.com/TheBrokenXD/lazy.css/issues"
+  },
+  "homepage": "https://broken-lazy-docs.vercel.app/"
+}
